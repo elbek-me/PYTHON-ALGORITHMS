@@ -38,16 +38,33 @@
 
 
 
-n = int(input())
-if n <  2:  
-    print("No")
-else:
-    for son in range(2, int(n**0.5) + 1):
-        if n % son == 0:
-            print("No")
-            break
-    else:
-        print("Yes")
+# n = int(input())
+# if n <  2:  
+#     print("No")
+# else:
+#     for son in range(2, int(n**0.5) + 1):
+#         if n % son == 0:
+#             print("No")
+#             break
+#     else:
+#         print("Yes")
 
+
+
+
+
+n = int(input())
+a = list(map(int, input().split()))
+b = {}
+for i in a:
+    if i in b:
+        b[i] += 1
+    else:
+        b[i] = 1
+c = 0
+for d in b:
+    if b[d] == 2:
+        c += 1
+print(c)
 
 
