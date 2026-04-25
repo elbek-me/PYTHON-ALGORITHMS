@@ -23,12 +23,12 @@
 # print(index)
 
 
-n = int(input())
-a = list(map(int, input().split()))
-b = a.index(min(a))
-c = a.index(max(a))
-d = abs(c - b) - 1
-print(d)
+# n = int(input())
+# a = list(map(int, input().split()))
+# b = a.index(min(a))
+# c = a.index(max(a))
+# d = abs(c - b) - 1
+# print(d)
 
 
 # n = int(input())
@@ -37,9 +37,17 @@ print(d)
 # print(*a)
 
 
-PYTHON-ALGORITHMS 
 
-
+n = int(input())
+if n <  2:  
+    print("No")
+else:
+    for son in range(2, int(n**0.5) + 1):
+        if n % son == 0:
+            print("No")
+            break
+    else:
+        print("Yes")
 
 
 
